@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Provider from './provider'
+import Header from '@/components/Header'
+import ToastContainer from '@/components/thirdParty/react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from '@/context/AuthContext';
+import * as actions from "@/actions/index"
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +17,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fa" dir="rtl">
+      <body className='font-Dana'>
+        <AuthProvider>
+          <Provider>
+            <Header/>
+            <main>
+
+              {children}
+
+              <ToastContainer />
+            </main>
+          </Provider>
+        </AuthProvider>
+      </body>
     </html>
   )
 }

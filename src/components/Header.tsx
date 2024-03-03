@@ -72,7 +72,7 @@ const Header = () => {
                 </symbol>
             </svg>
 
-            <header className='hidden absolute top-9 right-0 left-0 z-10 md:flex items-center w-[95%] xl:w-[90%] h-24 mx-auto bg-black/50 rounded-3xl px-5 lg:px-10 py-5 backdrop-blur-[6px]'>
+            <header className='hidden absolute top-9 right-0 left-0 z-20 md:flex items-center w-[95%] xl:w-[90%] h-24 mx-auto bg-black/50 rounded-3xl px-5 lg:px-10 py-5 backdrop-blur-[6px]'>
 
                 <div className='relative flex justify-between items-center w-screen'>
 

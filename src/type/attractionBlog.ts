@@ -21,3 +21,11 @@ export type attractionBlogFetchData = {
     updatedAt:Date
 
 }
+
+export type attractionListMeta = {
+    meta_title: string,
+    title:string
+    meta_description : string,
+    canonical : string,
+    createdAt:Date
+}
